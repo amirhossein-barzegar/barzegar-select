@@ -1,0 +1,35 @@
+{
+  "name": "barzegar-select",
+  "version": "1.0.0",
+  "description": "An awesome UI select box with too many features, which powered by JavaScript and JQuery!",
+  "main": "src/barzegar.select.jquery.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "jquery": "^3.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amirhossein-barzegar/barzegar-select.git"
+  },
+  "keywords": [
+    "selectbox",
+    "searchbox",
+    "input",
+    "selectize",
+    "tagify",
+    "tagging",
+    "select-input",
+    "search-input",
+    "jquery-select",
+    "select-option",
+    "api-select",
+    "jquery-input",
+    "ui-select",
+    "keyboard-input",
+    "inputbox"
+  ],
+  "author": "amirhossein barzegar <amirhossein.barzegar.info@gmail.com>",
+  "license": "MIT"
+}

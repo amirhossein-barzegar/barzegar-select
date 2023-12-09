@@ -1,0 +1,268 @@
+<!doctype html>
+<html dir="rtl" lang="fa">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, interactive-widget=resizes-content" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>BrzSelect</title>
+    <link rel="stylesheet" href="src/barzegar.select.jquery.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/custom.css">
+    <script src="node_modules\jquery\dist\jquery.min.js" type="text/javascript"></script>
+    <script src="src/barzegar.select.jquery.js" type="text/javascript"></script>
+</head>
+
+<body class="overflow-x-hidden">
+    <main>
+        <section class="container-sm mx-auto">
+            <div class="d-flex flex-column gap-4 px-2 py-4 px-md-4">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <form action="" class="row w-100 mx-auto">
+                            <div class="col-12 d-flex flex-column gap-2 w-100">
+                                <div class="row row-gap-2">
+                                    <div class="col-12">
+                                        <h4>افزونه BarzegarSelect</h3>
+                                    </div>
+                                </div>
+
+                                <div class="row row-gap-2">
+                                    <div class="col-12">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <label class="form-label h-100 mb-0 fw-bold" for="element_5432534">
+                                                <span>ساده برای تگ گذاری</span>
+                                            </label>
+                                            <small>با محدودیت انتخاب 2 عدد</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <input class="form-control w-100" id="element_5432534" />
+                                        <script>
+                                            $(document).ready(async function () {
+                                                var brzSelect1=$("#element_5432534").barzegarSelect({
+                                                    propertyToSearch: "name",
+                                                    selectedLimit: 2,
+                                                    minCharsToCreate: 2
+                                                })
+                                                brzSelect1.on("brzChange", function (e, { data }) {
+                                                    console.log("data", data)
+                                                })
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+
+                                <div class="row row-gap-2">
+                                    <div class="col-12">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <label class="form-label h-100 mb-0 fw-bold" for="element_8935270">
+                                                <span>دریافت و جستجو از وبسرویس با عکس</span>
+                                            </label>
+                                            <small>با محدودیت دراپ داون 3 عدد</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <input class="form-control w-100" id="element_8935270" type="text" />
+                                        <script>
+                                            var result=[
+                                                { id: "amir", name: "امیرحسین برزگر", img: "src/images/user.png" },
+                                                { id: "mosi", name: "مصطفی کرمی" },
+                                                { id: "kazi", name: "کاظم برزگر" },
+                                                { id: "masoud", name: "مسعود جباری" },
+                                                { id: "khodashenas", name: "خانم خداشناس", img: "src/images/user.png" },
+                                                { id: "jazini", name: "خانم جزینی" },
+                                                { id: "naseri", name: "مهدی ناصری" },
+                                                { id: "poorakbar", name: "محمد پوراکبر", img: "src/images/user.png" }
+                                            ]
+                                            $(document).ready(async function () {
+                                                var brzSelect2=$("#element_8935270").barzegarSelect({
+                                                    propertyToSearch: "name",
+                                                    liveConnect: true,
+                                                    dropdownLimit: 3,
+                                                    selectedLimit: 5,
+                                                    minChars: 2,
+                                                    webserviceUrl: "https://65722a7bd61ba6fcc0147b6e.mockapi.io/brz/api/search/users",
+                                                    method: "GET",
+                                                })
+                                                brzSelect2.on("brzChange", function (e, { data }) {
+                                                    console.log("data", data)
+                                                })
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+
+                                <div class="row row-gap-2">
+                                    <div class="col-12">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <label class="form-label h-100 mb-0 fw-bold" for="element_89352723">
+                                                <span>دریافت آرایه و نمایش با تصویر</span>
+                                            </label>
+                                            <small>با محدودیت دراپ داون 5 عدد</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <input class="form-control w-100" id="element_89352723" type="text" />
+                                        <script>
+                                            var result=[
+                                                { id: "amir", name: "امیرحسین برزگر", img: "src/images/user.png" },
+                                                { id: "mosi", name: "مصطفی کرمی" },
+                                                { id: "kazi", name: "کاظم برزگر" },
+                                                { id: "masoud", name: "مسعود جباری" },
+                                                { id: "khodashenas", name: "خانم خداشناس", img: "src/images/user.png" },
+                                                { id: "jazini", name: "خانم جزینی" },
+                                                { id: "naseri", name: "مهدی ناصری" },
+                                                { id: "poorakbar", name: "محمد پوراکبر", img: "src/images/user.png" }
+                                            ]
+                                            $(document).ready(async function () {
+                                                var brzSelect3=$("#element_89352723").barzegarSelect({
+                                                    propertyToSearch: "name",
+                                                    liveConnect: false,
+                                                    selectedLimit: null,
+                                                    dropdownLimit: 5
+                                                }, async function (data) {
+                                                    // or you can pass your await for webservice
+                                                    // pass data
+                                                    return result
+                                                })
+                                                console.info(brzSelect3.getValue())
+                                                brzSelect3.on("brzChange", function (e, { data }) {
+                                                    console.log(data)
+                                                })
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+
+                                <div class="row row-gap-2">
+                                    <div class="col-12">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <label class="form-label h-100 mb-0 fw-bold" for="element_8395012">
+                                                <span>دریافت آرایه و نمایش بدون تصویر</span>
+                                            </label>
+                                            <small>با افزودن دستی دو آیتم جدید دراپ داون</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <input class="form-control w-100" id="element_8395012" type="text" />
+                                        <script>
+                                            var result=[
+                                                { id: "amir", name: "امیرحسین برزگر", img: "src/images/user.png" },
+                                                { id: "mosi", name: "مصطفی کرمی" },
+                                            ]
+                                            $(document).ready(async function () {
+                                                var brzSelect4=$("#element_8395012").barzegarSelect({
+                                                    propertyToSearch: "name",
+                                                    liveConnect: false,
+                                                    selectedLimit: null,
+                                                    hasImg: false,
+                                                    dropdownLimit: 5
+                                                }, async function (data) {
+                                                    // or you can pass your await for webservice
+                                                    // pass data
+                                                    return result
+                                                })
+                                                brzSelect4.addDropdownItems([{ id: "new1", name: "جدید 1", img: "src/images/user.png" }, { id: "new2", name: "جدید 2" }])
+                                                brzSelect4.on("brzChange", function (e, { data }) {
+                                                    console.log(data)
+                                                })
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+
+                                <div class="row row-gap-2">
+                                    <div class="col-12">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <label class="form-label h-100 mb-0 fw-bold" for="element_542354354443">
+                                                <span>فقط انتخابی بدون افزودن</span>
+                                            </label>
+                                            <small>با محدودیت انتخاب 5 عدد و 2 عدد انتخاب شده</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <input class="form-control w-100" id="element_542354354443" type="text" />
+                                        <script>
+                                            var result=[
+                                                { id: "amir", name: "امیرحسین برزگر", img: "src/images/user.png" },
+                                                { id: "mosi", name: "مصطفی کرمی" },
+                                                { id: "kazi", name: "کاظم برزگر" },
+                                                { id: "masoud", name: "مسعود جباری" },
+                                                { id: "khodashenas", name: "خانم خداشناس", img: "src/images/user.png" },
+                                                { id: "jazini", name: "خانم جزینی" },
+                                                { id: "naseri", name: "مهدی ناصری" },
+                                                { id: "poorakbar", name: "محمد پوراکبر", img: "src/images/user.png" }
+                                            ]
+                                            $(document).ready(async function () {
+                                                var brzSelect5=$("#element_542354354443").barzegarSelect({
+                                                    propertyToSearch: "name",
+                                                    liveConnect: false,
+                                                    selectedLimit: null,
+                                                    dropdownLimit: 5,
+                                                    createItem: false
+                                                }, async function (data) {
+                                                    // or you can pass your await for webservice
+                                                    // pass data
+                                                    return result
+                                                })
+                                                brzSelect5.addSelectedItems([{ id: "amir", name: "امیرحسین برزگر", img: "src/images/user.png" }, { id: "naseri", name: "مهدی ناصری" }])
+                                                brzSelect5.on("brzChange", function (e, { data }) {
+                                                    console.log(data)
+                                                })
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+
+                                <div class="row row-gap-2">
+                                    <div class="col-12">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <label class="form-label h-100 mb-0 fw-bold" for="element_95734205">
+                                                <span>فقط انتخابی بدون افزودن</span>
+                                            </label>
+                                            <small>با محدودیت دراپ داون 2 عدد و ارسال مقادیر به input hidden</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <input class="form-control w-100" id="element_95734205" type="text" />
+                                        <script>
+                                            var result=[
+                                                { id: "amir", name: "امیرحسین برزگر", img: "src/images/user.png" },
+                                                { id: "mosi", name: "مصطفی کرمی" },
+                                                { id: "kazi", name: "کاظم برزگر" },
+                                                { id: "masoud", name: "مسعود جباری" },
+                                                { id: "khodashenas", name: "خانم خداشناس", img: "src/images/user.png" },
+                                                { id: "jazini", name: "خانم جزینی" },
+                                                { id: "naseri", name: "مهدی ناصری" },
+                                                { id: "poorakbar", name: "محمد پوراکبر", img: "src/images/user.png" }
+                                            ]
+                                            $(document).ready(async function () {
+                                                var brzSelect6=$("#element_95734205").barzegarSelect({
+                                                    propertyToSearch: "name",
+                                                    liveConnect: false,
+                                                    selectedLimit: null,
+                                                    dropdownLimit: 2,
+                                                    createItem: false
+                                                }, async function (data) {
+                                                    // or you can pass your await for webservice
+                                                    // pass data
+                                                    return result
+                                                })
+                                                brzSelect6.on("brzChange", function (e, { data }) {
+                                                    console.log(data)
+                                                })
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
