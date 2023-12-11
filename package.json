@@ -1,7 +1,7 @@
 {
   "name": "barzegar-select",
   "version": "1.0.0",
-  "description": "An awesome UI select box with too many features, which powered by JavaScript and JQuery!",
+  "description": "An awesome UI select box, search box, tagging input, etc... with too many features; which powered by JavaScript and JQuery!",
   "main": "src/barzegar.select.jquery.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

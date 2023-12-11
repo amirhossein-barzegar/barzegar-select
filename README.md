@@ -19,9 +19,9 @@
 پس آن ، باید فایل جاوااسکریپت و استایل کتابخانه barzegar-select را تهیه کرده و در زیر آن بارگیری نمایید.
 
 ```html
-<link href="https://cdn.jsdelivr.net/npm/barzegar-select@1.0.0/src/barzegar.select.jquery.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/barzegar-select@0.0.9/src/barzegar.select.jquery.css" rel="stylesheet"/>
 
-<script src="https://cdn.jsdelivr.net/npm/barzegar-select@1.0.0/src/barzegar.select.jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/barzegar-select@0.0.9/src/barzegar.select.jquery.min.js"></script>
 ```
 
 
@@ -29,7 +29,7 @@
 - امکان برچسب نویسی ، تگ گذاری و اضافه و حذف کردن آنها
 - امکان قرار دادن داده هایی برای نمایش و انتخاب کردن در لیست کشویی
 - امکان جستجو در میان آیتم های موجود در لیست کشویی
-- پشتیبانی کامل از صفحه کلید برای راحتی کاربران
+- پشتیبانی بینظیر و کامل از صفحه کلید برای راحتی کاربران و امکان جابه جایی ، افزودن و حذف آیتم ها با استفاده از صفحه کلید! ( حتی میتوان با Ctrl+A همه را انتخاب کرده و با دکمه Backspace یا Delete آنها را حذف کرد.)
 - امکان دریافت مستقیم داده ها از وبسرویس مشخص و ارسال مقادیر مورد نیاز به آن به ساده ترین شکل ممکن
 
 ## نحوه استفاده
@@ -56,7 +56,7 @@ maxLengthToCreate       | <sub>Int</sub>            | `30`                     |
 propertyKey             | <sub>String</sub>         | `"id"`                   | نام کلید هر آیتم
 propertyValue           | <sub>String</sub>         | `"name"`                 | نام مقدار هر آیتم
 propertyToSelect        | <sub>String</sub>         | `"select"`               | نام کلید انتخاب شدن یا نشدن هر آیتم
-propertyToSelect        | <sub>String</sub>         | `"readonly"`             | نام کلید فقط خواندنی بودن یا نبودن هر آیتم
+propertyToReadOnly        | <sub>String</sub>         | `"readonly"`             | نام کلید فقط خواندنی بودن یا نبودن هر آیتم
 createItem              | <sub>Boolean</sub>        | `true`                   | امکان افزودن آیتم های جدید با تایپ و ثبت کردن
 liveConnect             | <sub>Boolean</sub>        | `false`                  | اتصال مستقیم به وب سرویس و دریافت اطلاعات از آن
 dropdownLimit           | <sub>Int</sub>            | `3`                      | محدود کردن تعداد نمایش در لیست کشویی
@@ -70,6 +70,6 @@ customData              | <sub>Object</sub>         | `{}`                     |
 delay                   | <sub>Int</sub>            | `100`                    | تاخیر در دریافت نتایج از وبسرویس
 searchingText           | <sub>String</sub>         | `"در حال جستجو ..."`                      | متن عبارت درحال جستجو از وب سرویس
 addBtnText              | <sub>String</sub>         | `"افزودن"`               | متن دکمه افزودن
-deleteIcon              | <sub>String</sub>         | `"<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.94 43.94" style="width: 7px;height:7px;"><g><path d="m29.04,21.97l13.44-13.44c.94-.94,1.46-2.19,1.46-3.53s-.52-2.59-1.46-3.54c-.95-.94-2.2-1.46-3.54-1.46s-2.59.52-3.5,1.43l-13.23,13.71L8.53,1.46c-.94-.94-2.19-1.46-3.53-1.46S2.41.52,1.46,1.46c-.94.95-1.46,2.2-1.46,3.54s.52,2.59,1.43,3.5l13.95,13.47L1.46,35.41c-.94.94-1.46,2.19-1.46,3.53s.52,2.59,1.46,3.54c.95.94,2.2,1.46,3.54,1.46s2.59-.52,3.53-1.46l13.68-13.68,13.2,13.68c.94.94,2.19,1.46,3.53,1.46s2.59-.52,3.54-1.46c.94-.95,1.46-2.2,1.46-3.54s-.52-2.59-1.46-3.53l-13.44-13.44Z"/></g></g></svg>"`                  | آیکون دکمه حذف موارد انتخاب شده
+deleteIcon              | <sub>String</sub>         | `"<svg></svg>"`                  | آیکون دکمه حذف موارد انتخاب شده
 hasImg                  | <sub>Boolean</sub>        | `true`                   | امکان نمایش آیتم همراه با عکس
 propertyImg             | <sub>String</sub>         | `"img"`                  | نام کلید خصوصیت عکس
