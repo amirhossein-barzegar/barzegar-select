@@ -1,6 +1,6 @@
 {
   "name": "barzegar-select",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An awesome UI select box, search box, tagging input, etc... with too many features; which powered by JavaScript and JQuery!",
   "main": "src/barzegar.select.jquery.js",
   "scripts": {
@@ -30,6 +30,6 @@
     "keyboard-input",
     "inputbox"
   ],
-  "author": "amirhossein barzegar <amirhossein.barzegar.info@gmail.com>",
+  "author": "amirhossein barzegar <barzegar.select.info@gmail.com>",
   "license": "MIT"
 }
